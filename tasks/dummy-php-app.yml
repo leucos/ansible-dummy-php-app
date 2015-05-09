@@ -1,0 +1,28 @@
+- name: Installs prereqs
+  apt: >
+    pkg=git
+    state=latest
+
+- name: Creates deploy user
+  user: >
+    name={{ dummy_php_app_user }}
+    comment="Web application user"
+    shell=/bin/bash
+    home={{ dummy_php_app_home }}
+
+- name: Creates deploy directory
+  file: >
+    path={{ dummy_php_app_home }}
+    owner={{ dummy_php_app_user }}
+    state=directory
+
+- name: Checkout app
+  sudo_user: "{{ dummy_php_app_user }}"
+  sudo: true
+  git: >
+    repo={{ dummy_php_app_repos }}
+    dest={{ dummy_php_app_home }}/dummy-php-app/
+    accept_hostkey=true
+    force=yes
+  register: dummy_php_app_deployed
+
