@@ -25,3 +25,16 @@
     force=yes
   register: dummy_php_app_deployed
 
+- name: Adds config to nginx
+  template: >
+    src="../templates/dummy-php-app.conf.j2"
+    dest=/etc/nginx/sites-available/dummy-php-app.conf
+    backup=yes
+
+- name: Symlinks config
+  file: >
+    src=/etc/nginx/sites-available/dummy-php-app.conf
+    dest=/etc/nginx/sites-enabled/dummy-php-app.conf
+    state=link
+  notify: Restart nginx
+

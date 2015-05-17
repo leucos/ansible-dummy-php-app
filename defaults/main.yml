@@ -1,0 +1,3 @@
+dummy_php_app_deploy_dir: /srv/dummyapp
+dummy_php_app_port: 80
+dummy_php_app_user: dummyapp
