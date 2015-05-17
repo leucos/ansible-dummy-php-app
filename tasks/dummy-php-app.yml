@@ -8,7 +8,6 @@
     name={{ dummy_php_app_user }}
     comment="Web application user"
     shell=/bin/bash
-    home={{ dummy_php_app_home }}
 
 - name: Creates deploy directory
   file: >
