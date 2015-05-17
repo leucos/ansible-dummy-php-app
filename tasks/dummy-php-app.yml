@@ -45,3 +45,4 @@
   with_items:
     - available
     - enabled
+  notify: Restart nginx
