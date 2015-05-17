@@ -11,7 +11,7 @@
 
 - name: Creates deploy directory
   file: >
-    path={{ dummy_php_app_home }}
+    path={{ dummy_php_app_deploy_dir }}
     owner={{ dummy_php_app_user }}
     state=directory
 
