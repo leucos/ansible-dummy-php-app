@@ -20,7 +20,7 @@
   sudo: true
   git: >
     repo={{ dummy_php_app_repos }}
-    dest={{ dummy_php_app_home }}/dummy-php-app/
+    dest={{ dummy_php_app_deploy_dir }}/dummy-php-app/
     accept_hostkey=true
     force=yes
   register: dummy_php_app_deployed
