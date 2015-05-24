@@ -12,6 +12,9 @@ server {
     index index.html index.htm index.php;
 #    try_files $uri $uri/ /index.php?q=$uri&$args;
 
+    access_log /var/log/nginx/dummy-php-app.log
+    error_log /var/log/nginx/dummy-php-app_error.log
+
     # Define default caching of 24h
     expires 86400s;
     add_header Pragma public;
