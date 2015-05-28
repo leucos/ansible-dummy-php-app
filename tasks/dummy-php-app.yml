@@ -46,3 +46,6 @@
     - available
     - enabled
   notify: Restart nginx
+
+- name: set port to check
+  set_fact: check_port={{ dummy_php_app_port }}
