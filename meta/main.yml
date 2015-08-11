@@ -6,4 +6,5 @@ galaxy_info:
   min_ansible_version: 1.2
 
 dependencies: 
-  - erasme.php5-fpm
+  - role: ansible-php5-fpm
+    src: https://github.com/erasme/ansible-php5-fpm.git
