@@ -5,6 +5,7 @@ galaxy_info:
   license: MIT
   min_ansible_version: 1.2
 
-dependencies: 
+dependencies:
   - role: ansible-php5-fpm
+    name: ansible-php5-fpm
     src: https://github.com/leucos/ansible-php5-fpm.git
