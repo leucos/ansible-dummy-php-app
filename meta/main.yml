@@ -7,4 +7,4 @@ galaxy_info:
 
 dependencies: 
   - role: ansible-php5-fpm
-    src: https://github.com/erasme/ansible-php5-fpm.git
+    src: https://github.com/leucos/ansible-php5-fpm.git
